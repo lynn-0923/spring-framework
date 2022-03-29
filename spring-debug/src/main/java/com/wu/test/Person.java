@@ -2,7 +2,6 @@ package com.wu.test;
 
 public class Person {
 
-	private ClassLoader classLoader;
 	private Integer id;
 	private String name;
 
