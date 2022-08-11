@@ -4,6 +4,8 @@
  */
 package com.wu;
 
+import com.wu.selfEdit.Customer;
+import com.wu.selftag.User;
 import com.wu.test.Person;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,11 +16,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-//		MyClassPathXmlApplicationContext applicationContext = new MyClassPathXmlApplicationContext("applicationContext.xml");
-
-//		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-${username}.xml");
+		ClassPathXmlApplicationContext applicationContext = new MyClassPathXmlApplicationContext("applicationContext.xml");
 		Person person = (Person) applicationContext.getBean("person");
 		System.out.println(person);
+//		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("selfedit.xml");
+//		Customer customer = applicationContext.getBean(Customer.class);
+//		System.out.println(customer);
 	}
 }

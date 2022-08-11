@@ -6,14 +6,8 @@ public class Person {
 	private String name;
 
 	public Person() {
-		System.out.println("构造方法");
+		System.out.println("construct init");
 	}
-
-	public Person(Integer id, String name) {
-		this.id = id;
-		this.name = name;
-	}
-
 
 	public Person(String name, Integer id) {
 		this.id = id;

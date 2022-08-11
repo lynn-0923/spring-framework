@@ -136,6 +136,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 		this.propertySources = propertySources;
 		// 创建属性解析类
 		this.propertyResolver = createPropertyResolver(propertySources);
+		//设置参数
 		customizePropertySources(propertySources);
 	}
 

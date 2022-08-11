@@ -5,14 +5,22 @@
 
 	<bean id="customer" class="com.wu.selfEdit.Customer">
 		<property name="name" value="zhangsan"></property>
-		<property name="address" value="江西省_景德镇市_乐平"></property>
+		<property name="address" value="jiangxi_jingdezhen_leping"></property>
 	</bean>
 
 	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
-		<property name="propertyEditorRegistrars">
-			<list>
-				<bean class="com.wu.selfEdit.AddressPropertyEditorRegistrar"></bean>
-			</list>
+		<!--		<property name="propertyEditorRegistrars">-->
+		<!--			<list>-->
+		<!--				<bean class="com.wu.selfEdit.AddressPropertyEditorRegistrar"></bean>-->
+		<!--			</list>-->
+		<!--		</property>-->
+
+		<property name="customEditors">
+			<map>
+				<entry key="com.wu.selfEdit.Address">
+					<value>com.wu.selfEdit.AddressPropertyEditor</value>
+				</entry>
+			</map>
 		</property>
 	</bean>
 

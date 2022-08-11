@@ -15,6 +15,6 @@ public class AddressPropertyEditorRegistrar implements PropertyEditorRegistrar {
 
 	@Override
 	public void registerCustomEditors(PropertyEditorRegistry registry) {
-		registry.registerCustomEditor(Address.class, new AddressPropertyEditor. class);
+		registry.registerCustomEditor(Address.class, new AddressPropertyEditor());
 	}
 }

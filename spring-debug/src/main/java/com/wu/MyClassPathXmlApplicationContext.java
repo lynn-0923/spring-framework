@@ -5,6 +5,7 @@
 package com.wu;
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -25,7 +26,7 @@ public class MyClassPathXmlApplicationContext extends ClassPathXmlApplicationCon
 
 	@Override
 	protected void customizeBeanFactory(DefaultListableBeanFactory beanFactory) {
-
+//		super.addBeanFactoryPostProcessor(new MyBeanFactoryPostProcessor());
 		super.customizeBeanFactory(beanFactory);
 	}
 }
